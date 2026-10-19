@@ -18,6 +18,12 @@ adapter/in/web  ->  application/port/in  ->  application/service  ->  domain
                           application/port/out  <-  adapter/out/persistence
 ```
 
+## Documentation
+
+- [Product requirements](docs/PRD.md)
+- [Technical design](docs/TECHNICAL_DESIGN.md) and [ADRs](docs/adr/)
+- [Rules for AI agents](AGENTS.md) and [agent roles](docs/agents/)
+
 ## Running locally
 
 Requirements: Java 21, Docker, Ollama.

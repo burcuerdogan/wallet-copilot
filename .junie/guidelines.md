@@ -1,0 +1,1 @@
+Follow the rules in `AGENTS.md` at the repository root. Requirements are in `docs/PRD.md`, the design in `docs/TECHNICAL_DESIGN.md` and decisions in `docs/adr/`. Your role (Product Owner, Architect, Test or Developer agent) is given in the chat; role rules are in `docs/agents/`.
