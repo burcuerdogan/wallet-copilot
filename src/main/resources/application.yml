@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: wallet-copilot
+  docker:
+    compose:
+      # Container'lar uygulama kapanınca durmasın; sonraki açılış hızlı olur
+      lifecycle-management: start-only
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always

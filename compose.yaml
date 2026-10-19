@@ -1,0 +1,19 @@
+services:
+  postgres:
+    # pgvector eklentisi hazır Postgres imajı (4. haftada RAG için kullanacağız)
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: wallet
+      POSTGRES_USER: wallet
+      POSTGRES_PASSWORD: wallet
+    ports:
+      - "5432:5432"
+    labels:
+      # İmaj adı "postgres" olmadığı için Spring Boot'a bunun bir Postgres olduğunu söylüyoruz
+      org.springframework.boot.service-connection: postgres
+
+  kafka:
+    # Tek node, KRaft modunda (Zookeeper yok). 2. haftada kullanacağız
+    image: apache/kafka:3.9.0
+    ports:
+      - "9092:9092"
